@@ -6,3 +6,6 @@ Style/FrozenStringLiteralComment:
 
 Style/ParallelAssignment:
   Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false
