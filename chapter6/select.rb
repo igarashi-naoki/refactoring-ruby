@@ -1,16 +1,19 @@
 class Select
+  def self.with_option(option)
+    select = new
+    select.options << option
+    select
+  end
+
   def options
     @options ||= []
   end
 
-  def add_option(arg)
+  def and(arg)
     options << arg
+    self
   end
 end
 
-select = Select.new
-select.add_option(1999)
-select.add_option(2000)
-select.add_option(2001)
-select.add_option(2002)
+select = Select.with_option(1999).and(2000).and(2001).and(2002)
 pp select
